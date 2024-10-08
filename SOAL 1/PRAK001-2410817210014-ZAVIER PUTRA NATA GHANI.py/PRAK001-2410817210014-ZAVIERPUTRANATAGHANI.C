@@ -1,3 +1,6 @@
-def cetak_pesan():
-    print("Saya Calon Programmer No. 1")
-cetak_pesan()
+#include <stdio.h>
+
+int main  (){
+    printf("Saya Calon Programmer No. 1\n");
+    return 0;
+}
