@@ -1,26 +1,28 @@
 #include <stdio.h>
 
 int main() {
-    int a, b, c, temp;
+    int nilai;
+    char huruf;
 
-    printf("Masukkan tiga angka (dipisah dengan spasi): ");
-    scanf("%d %d %d", &a, &b, &c);
+    printf("Masukkan nilai: ");
+    scanf("%d", &nilai);
 
-    if (a > b) {
-        temp = a;
-        a = b;
-        b = temp;
+    if (nilai >= 80) {
+        huruf = 'A';
+    } else if (nilai >= 70) {
+        huruf = 'B';
+    } else if (nilai >= 60) {
+        huruf = 'C';
+    } else if (nilai >= 50) {
+        huruf = 'D';
+    } else {
+        huruf = 'E';
     }
-    if (a > c) {
-        temp = a;
-        a = c;
-        c = temp;
-    }
-    if (b > c) {
-        temp = b;
-        b = c;
-        c = temp;
-    }
+
+    printf("%c\n", huruf);
+
+    return 0;
+}
 
     printf("Hasil pengurutan: %d %d %d\n", a, b, c);
 
