@@ -1,25 +1,37 @@
 #include <stdio.h>
-#include <math.h>
 
-int hitung(int nilai1, int nilai2) {
-    return nilai1 - nilai2;
+int maksimal(int a, int b) {
+    if (a > b) {
+        return a;
+    }
+    return b;
 }
 
-int mutlak(int angka) {
-    if (angka < 0) {
-        return -angka;
+int minimal(int a, int b) {
+    if (a < b) {
+        return a;
     }
-    return angka;
+    return b;
 }
 
 int main() {
-    int a, b, c, d, hasil;
+    int batas = 0;
+    int maks = -100000; 
+    int minim = 100000; 
+    int bilangan;
 
     printf("Masukkan nilai (dipisahkan spasi): ");
-    scanf("%d %d %d %d", &a, &b, &c, &d);
+    scanf("%d", &bilangan);
+ 
+    while (batas < bilangan) {
+        int nilai;
+        scanf("%d", &nilai);
+        maks = maksimal(maks, nilai);
+        minim = minimal(minim, nilai);
+        batas++;
+    }
 
-    hasil = mutlak(hitung(a, c)) + mutlak(hitung(b, d));
-    printf("%d", hasil);
-
+    printf("%d %d", maks, minim);
+    
     return 0;
 }
